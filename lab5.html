@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <a href='https://scmcqueen.github.io/si649_hw/skyelerStarWars.csv'>Data</a>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"usermeta": {"embedOptions": {"theme": "fivethirtyeight"}}, "config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "stroke": null}, "axis": {"domain": false, "grid": false, "labelColor": "black", "labelFont": "Arial", "ticks": false}, "facet": {"spacing": 5}}, "data": {"name": "data-a56bc19ae311caf8ed86bf662d043b19"}, "facet": {"column": {"field": "favorability", "sort": ["Favorable", "Neutral", "Unfavorable", "Unfamiliar"], "title": null, "type": "nominal"}}, "spec": {"mark": {"type": "bar"}, "encoding": {"color": {"field": "favorability", "legend": null, "scale": {"domain": ["Favorable", "Neutral", "Unfavorable", "Unfamiliar"], "range": ["green", "blue", "red", "gray"]}, "title": "Favorability", "type": "nominal"}, "text": {"field": "percentage", "format": ".0f", "type": "quantitative"}, "tooltip": [{"field": "character", "type": "nominal"}, {"field": "favorability", "type": "nominal"}, {"field": "percentage", "type": "quantitative"}], "x": {"axis": {"labels": false, "ticks": false}, "field": "percentage", "scale": {"domain": [0, 100]}, "title": null, "type": "quantitative"}, "y": {"axis": {"labelColor": "black"}, "field": "character", "sort": {"field": "percentage", "op": "max", "order": "descending"}, "title": null, "type": "nominal"}}, "height": 300, "width": 100}, "columns": 4, "resolve": {"scale": {"x": "independent"}}, "title": {"text": "'Star Wars' Character Favorability Ratings", "subtitle": "By 834 respondents"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-a56bc19ae311caf8ed86bf662d043b19": [{"character": "Anakin Skywalker", "favorability": "Favorable", "percentage": 62}, {"character": "Anakin Skywalker", "favorability": "Neutral", "percentage": 16}, {"character": "Anakin Skywalker", "favorability": "Unfavorable", "percentage": 15}, {"character": "Anakin Skywalker", "favorability": "Unfamiliar", "percentage": 6}, {"character": "Boba Fett", "favorability": "Favorable", "percentage": 36}, {"character": "Boba Fett", "favorability": "Neutral", "percentage": 31}, {"character": "Boba Fett", "favorability": "Unfavorable", "percentage": 17}, {"character": "Boba Fett", "favorability": "Unfamiliar", "percentage": 16}, {"character": "C-3P0", "favorability": "Favorable", "percentage": 85}, {"character": "C-3P0", "favorability": "Neutral", "percentage": 10}, {"character": "C-3P0", "favorability": "Unfavorable", "percentage": 4}, {"character": "C-3P0", "favorability": "Unfamiliar", "percentage": 2}, {"character": "Darth Vader", "favorability": "Favorable", "percentage": 58}, {"character": "Darth Vader", "favorability": "Unfavorable", "percentage": 30}, {"character": "Darth Vader", "favorability": "Neutral", "percentage": 10}, {"character": "Darth Vader", "favorability": "Unfamiliar", "percentage": 1}, {"character": "Emperor Palpatine", "favorability": "Favorable", "percentage": 31}, {"character": "Emperor Palpatine", "favorability": "Neutral", "percentage": 26}, {"character": "Emperor Palpatine", "favorability": "Unfavorable", "percentage": 24}, {"character": "Emperor Palpatine", "favorability": "Unfamiliar", "percentage": 19}, {"character": "Han Solo", "favorability": "Favorable", "percentage": 92}, {"character": "Han Solo", "favorability": "Neutral", "percentage": 5}, {"character": "Han Solo", "favorability": "Unfamiliar", "percentage": 2}, {"character": "Han Solo", "favorability": "Unfavorable", "percentage": 1}, {"character": "Jar Jar Binks", "favorability": "Unfavorable", "percentage": 37}, {"character": "Jar Jar Binks", "favorability": "Favorable", "percentage": 29}, {"character": "Jar Jar Binks", "favorability": "Neutral", "percentage": 20}, {"character": "Jar Jar Binks", "favorability": "Unfamiliar", "percentage": 13}, {"character": "Lando Calrissian", "favorability": "Favorable", "percentage": 45}, {"character": "Lando Calrissian", "favorability": "Neutral", "percentage": 29}, {"character": "Lando Calrissian", "favorability": "Unfamiliar", "percentage": 18}, {"character": "Lando Calrissian", "favorability": "Unfavorable", "percentage": 9}, {"character": "Luke Skywalker", "favorability": "Favorable", "percentage": 93}, {"character": "Luke Skywalker", "favorability": "Neutral", "percentage": 5}, {"character": "Luke Skywalker", "favorability": "Unfavorable", "percentage": 2}, {"character": "Luke Skywalker", "favorability": "Unfamiliar", "percentage": 1}, {"character": "Obi Wan Kenobi", "favorability": "Favorable", "percentage": 91}, {"character": "Obi Wan Kenobi", "favorability": "Neutral", "percentage": 5}, {"character": "Obi Wan Kenobi", "favorability": "Unfamiliar", "percentage": 2}, {"character": "Obi Wan Kenobi", "favorability": "Unfavorable", "percentage": 2}, {"character": "Padme Amidala", "favorability": "Favorable", "percentage": 43}, {"character": "Padme Amidala", "favorability": "Neutral", "percentage": 25}, {"character": "Padme Amidala", "favorability": "Unfamiliar", "percentage": 20}, {"character": "Padme Amidala", "favorability": "Unfavorable", "percentage": 11}, {"character": "Princess Leia Organa", "favorability": "Favorable", "percentage": 91}, {"character": "Princess Leia Organa", "favorability": "Neutral", "percentage": 6}, {"character": "Princess Leia Organa", "favorability": "Unfavorable", "percentage": 2}, {"character": "Princess Leia Organa", "favorability": "Unfamiliar", "percentage": 1}, {"character": "R2 D2", "favorability": "Favorable", "percentage": 90}, {"character": "R2 D2", "favorability": "Neutral", "percentage": 7}, {"character": "R2 D2", "favorability": "Unfavorable", "percentage": 2}, {"character": "R2 D2", "favorability": "Unfamiliar", "percentage": 1}, {"character": "Yoda", "favorability": "Favorable", "percentage": 91}, {"character": "Yoda", "favorability": "Neutral", "percentage": 6}, {"character": "Yoda", "favorability": "Unfavorable", "percentage": 2}, {"character": "Yoda", "favorability": "Unfamiliar", "percentage": 1}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
